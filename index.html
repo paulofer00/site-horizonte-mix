@@ -3,48 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- SEO Meta Tags -->
-  <title>Horizonte Mix Engenharia — Soluções em Concreto | Santarém - PA</title>
-  <meta name="description" content="Horizonte Mix Engenharia — Fábrica de blocos de concreto, canaletas e pavers para pavimentação e construção civil em Santarém - PA. Atendimento direto da fábrica." />
-  <meta name="keywords" content="Horizonte Mix, concreto Santarém, bloco de concreto, paver intertravado, unistein, paver sextavado, canaleta lisa, pré-moldados Santarém Pará" />
+  <title>Horizonte Mix Engenharia | Blocos e Pavers Santarém - PA</title>
+  <meta name="description" content="Fábrica de blocos de concreto, canaletas e pavers em Santarém - PA. Qualidade, alta resistência e entrega ágil direto da fábrica. Solicite seu orçamento!" />
   <meta name="author" content="Horizonte Mix Engenharia Ltda" />
-  <meta name="robots" content="index, follow" />
-  
-  <!-- Open Graph -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="geo.region" content="BR-PA" />
+  <meta name="geo.placename" content="Santarém" />
+  <meta name="theme-color" content="#0a4833" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://horizontemix.com.br/" />
+
+  <!-- Open Graph / Facebook / WhatsApp (1200x630) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Horizonte Mix Engenharia — Soluções em Concreto" />
-  <meta property="og:description" content="Concreto de qualidade para um novo horizonte na sua obra. Blocos, canaletas e pavers direto da fábrica em Santarém - PA." />
-  <meta property="og:image" content="assets/images/logo-horizonte-mix.png" />
+  <meta property="og:site_name" content="Horizonte Mix Engenharia" />
+  <meta property="og:url" content="https://horizontemix.com.br/" />
+  <meta property="og:title" content="Horizonte Mix Engenharia | Blocos e Pavers Santarém - PA" />
+  <meta property="og:description" content="Fábrica de blocos de concreto, canaletas e pavers em Santarém - PA. Qualidade, alta resistência e entrega ágil direto da fábrica." />
+  <meta property="og:image" content="https://horizontemix.com.br/assets/images/og-horizonte-mix.jpg" />
+  <meta property="og:image:secure_url" content="https://horizontemix.com.br/assets/images/og-horizonte-mix.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Horizonte Mix Engenharia — Soluções em Concreto para Pavimentação e Construção Civil em Santarém - PA" />
   <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Horizonte Mix Engenharia | Blocos e Pavers Santarém - PA" />
+  <meta name="twitter:description" content="Fábrica de blocos de concreto, canaletas e pavers em Santarém - PA. Qualidade, alta resistência e entrega ágil direto da fábrica." />
+  <meta name="twitter:image" content="https://horizontemix.com.br/assets/images/og-horizonte-mix.jpg" />
+  <meta name="twitter:image:alt" content="Horizonte Mix Engenharia — Soluções em Concreto em Santarém - PA" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/logo-horizonte-mix.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo-horizonte-mix.png" />
+
+  <!-- Core Web Vitals: Preconnect & LCP Preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preload" as="image" href="assets/images/hero-factory.webp" type="image/webp" fetchpriority="high" />
+
+  <!-- Google Fonts (Non-Blocking via <link>) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
 
   <!-- Master Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Schema.org JSON-LD Structured Data -->
+  <!-- Schema.org JSON-LD Structured Data (LocalBusiness / Organization, WebSite, BreadcrumbList & OfferCatalog) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Horizonte Mix Engenharia Ltda",
-    "legalName": "Horizonte Mix Engenharia Ltda - ME",
-    "image": "assets/images/logo-horizonte-mix.png",
-    "telephone": "+55-93-99198-1830",
-    "email": "horizontemixstm@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Estrada da Maria José",
-      "addressLocality": "Santarém",
-      "addressRegion": "PA",
-      "postalCode": "68038-000",
-      "addressCountry": "BR"
-    },
-    "openingHours": "Mo-Fr 07:30-17:30, Sa 07:30-12:00",
-    "sameAs": [
-      "https://www.instagram.com/horizontemixstm"
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "HomeAndConstructionBusiness", "Organization"],
+        "@id": "https://horizontemix.com.br/#organization",
+        "name": "Horizonte Mix Engenharia",
+        "legalName": "Horizonte Mix Engenharia Ltda - ME",
+        "url": "https://horizontemix.com.br/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://horizontemix.com.br/assets/images/logo-horizonte-mix.png",
+          "width": 1024,
+          "height": 383
+        },
+        "image": "https://horizontemix.com.br/assets/images/og-horizonte-mix.jpg",
+        "description": "Fábrica de blocos de concreto, meio-blocos, canaletas lisas e pisos intertravados (pavers) para pavimentação e construção civil em Santarém - PA.",
+        "telephone": "+55-93-99198-1830",
+        "email": "horizontemixstm@gmail.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Estrada da Maria José",
+          "addressLocality": "Santarém",
+          "addressRegion": "PA",
+          "postalCode": "68038-000",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -2.458,
+          "longitude": -54.718
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Santarém",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Pará"
+          }
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "07:30",
+            "closes": "17:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "07:30",
+            "closes": "12:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/horizontemixstm"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Catálogo de Artefatos de Concreto Horizonte Mix",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Bloco de Estrutura e Vedação (09 x 19 x 39 cm)",
+                "image": "https://horizontemix.com.br/assets/images/bloco-estrutura-vedacao.jpg",
+                "description": "Bloco de concreto resistente e padronizado para levantamento de paredes, muros e estruturas."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Meio Bloco de Estrutura e Vedação (09 x 19 x 39 cm)",
+                "image": "https://horizontemix.com.br/assets/images/meio-bloco-vedacao.jpg",
+                "description": "Peça pronta para acabamento de cantos, vãos de portas e janelas sem precisar quebrar blocos na obra."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Canaleta Lisa de Concreto (14 x 19 x 39 cm)",
+                "image": "https://horizontemix.com.br/assets/images/canaleta-lisa.jpg",
+                "description": "Canaleta de concreto prática para execução de cintas de amarração, vergas e escoamento de água."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Paver Unistein 18 Faces (08 cm)",
+                "image": "https://horizontemix.com.br/assets/images/paver-unistein.jpg",
+                "description": "Piso intertravado de 18 faces com encaixe firme, ideal para ruas, pátios de manobra e tráfego pesado."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Paver Sextavado (30x08 | 25x08 | 25x06 cm)",
+                "image": "https://horizontemix.com.br/assets/images/paver-sextavado.jpg",
+                "description": "Bloquete sextavado resistente para pavimentação de vias, pátios, estacionamentos e áreas externas."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Product",
+                "name": "Paver Retangular (10 x 20 cm — 06 cm e 08 cm)",
+                "image": "https://horizontemix.com.br/assets/images/paver-retangular.jpg",
+                "description": "Paver retangular versátil com excelente acabamento para calçadas, garagens, praças e condomínios."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://horizontemix.com.br/#website",
+        "url": "https://horizontemix.com.br/",
+        "name": "Horizonte Mix Engenharia",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://horizontemix.com.br/#organization"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://horizontemix.com.br/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://horizontemix.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Quem Somos",
+            "item": "https://horizontemix.com.br/#quem-somos"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Produtos em Concreto",
+            "item": "https://horizontemix.com.br/#produtos"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Calculadora de Obra",
+            "item": "https://horizontemix.com.br/#calculadora"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Orçamento",
+            "item": "https://horizontemix.com.br/#orcamento"
+          }
+        ]
+      }
     ]
   }
   </script>
@@ -54,10 +229,10 @@
   <!-- =========================================================================
        STICKY NAVBAR (Apenas o Menu Principal)
        ========================================================================= -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" aria-label="Navegação Principal">
     <div class="container navbar-container">
       <a href="#inicio" class="brand-logo" aria-label="Horizonte Mix Início">
-        <img src="assets/images/logo-horizonte-mix.png" alt="Logo Horizonte Mix Engenharia" />
+        <img src="assets/images/logo-horizonte-mix.png" alt="Logo Horizonte Mix Engenharia em Santarém - PA" width="1024" height="383" decoding="async" />
       </a>
 
       <ul class="nav-menu" id="navMenu">
@@ -75,8 +250,8 @@
         </a>
       </div>
 
-      <button class="mobile-toggle" aria-label="Menu de Navegação">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <button type="button" class="mobile-toggle" aria-label="Abrir Menu de Navegação">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -91,10 +266,13 @@
   <section class="hero-slider-section" id="inicio">
     <div class="slider-wrapper">
 
-      <!-- Slide 1: Institucional & Fábrica -->
+      <!-- Slide 1: Institucional & Fábrica (LCP Image) -->
       <div class="slide active">
         <div class="slide-bg">
-          <img src="assets/images/hero-factory.jpg" alt="Fábrica de artefatos de concreto Horizonte Mix em Santarém" />
+          <picture>
+            <source srcset="assets/images/hero-factory.webp" type="image/webp" />
+            <img src="assets/images/hero-factory.jpg" alt="Fábrica de blocos e pavers de concreto Horizonte Mix Engenharia em Santarém - PA" width="1376" height="768" fetchpriority="high" decoding="async" />
+          </picture>
         </div>
         <div class="slide-overlay"></div>
         <div class="slide-content-container">
@@ -120,7 +298,10 @@
       <!-- Slide 2: Linha de Pavers -->
       <div class="slide">
         <div class="slide-bg">
-          <img src="assets/images/slider-paving.jpg" alt="Pavimentação com pavers de concreto Horizonte Mix" />
+          <picture>
+            <source srcset="assets/images/slider-paving.webp" type="image/webp" />
+            <img src="assets/images/slider-paving.jpg" alt="Pavimentação intertravada com pavers de concreto Horizonte Mix em Santarém - PA" width="1376" height="768" loading="lazy" decoding="async" />
+          </picture>
         </div>
         <div class="slide-overlay"></div>
         <div class="slide-content-container">
@@ -146,7 +327,10 @@
       <!-- Slide 3: Blocos e Canaletas -->
       <div class="slide">
         <div class="slide-bg">
-          <img src="assets/images/slider-masonry.jpg" alt="Obra com blocos e canaletas de concreto Horizonte Mix" />
+          <picture>
+            <source srcset="assets/images/slider-masonry.webp" type="image/webp" />
+            <img src="assets/images/slider-masonry.jpg" alt="Alvenaria com blocos e canaletas de concreto Horizonte Mix em Santarém - PA" width="1376" height="768" loading="lazy" decoding="async" />
+          </picture>
         </div>
         <div class="slide-overlay"></div>
         <div class="slide-content-container">
@@ -170,13 +354,13 @@
       </div>
 
       <!-- Slider Controls -->
-      <button class="slider-arrow slider-prev" aria-label="Slide anterior">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <button type="button" class="slider-arrow slider-prev" aria-label="Slide anterior">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <polyline points="15 18 9 12 15 6"></polyline>
         </svg>
       </button>
-      <button class="slider-arrow slider-next" aria-label="Próximo slide">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <button type="button" class="slider-arrow slider-next" aria-label="Próximo slide">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <polyline points="9 18 15 12 9 6"></polyline>
         </svg>
       </button>
@@ -189,26 +373,26 @@
   <!-- =========================================================================
        FAIXA DE DIFERENCIAIS (Fundo Verde Escuro #062C1F com Destaques Dourados)
        ========================================================================= -->
-  <section class="trust-section">
+  <section class="trust-section" aria-label="Diferenciais da Horizonte Mix">
     <div class="container">
       <div class="trust-grid">
         <div class="trust-item">
-          <h4>Fábrica em Santarém</h4>
+          <h3>Fábrica em Santarém</h3>
           <p>Produção própria na Estrada da Maria José com acompanhamento rigoroso em cada lote.</p>
         </div>
 
         <div class="trust-item">
-          <h4>Entrega com Agilidade</h4>
+          <h3>Entrega com Agilidade</h3>
           <p>Logística organizada para abastecer o seu canteiro de obras dentro do prazo combinado.</p>
         </div>
 
         <div class="trust-item">
-          <h4>Resistência Garantida</h4>
+          <h3>Resistência Garantida</h3>
           <p>Artefatos de concreto produzidos para suportar o clima e as exigências estruturais da região.</p>
         </div>
 
         <div class="trust-item">
-          <h4>Negociação Direta</h4>
+          <h3>Negociação Direta</h3>
           <p>Atendimento rápido pelo WhatsApp para construtoras, engenheiros, empresas e obras particulares.</p>
         </div>
       </div>
@@ -223,7 +407,10 @@
       <div class="about-grid">
         <div class="about-visual">
           <div class="about-main-image">
-            <img src="assets/images/slider-masonry.jpg" alt="Produção e controle de qualidade Horizonte Mix Engenharia" loading="lazy" />
+            <picture>
+              <source srcset="assets/images/slider-masonry.webp" type="image/webp" />
+              <img src="assets/images/slider-masonry.jpg" alt="Produção e controle de qualidade de blocos e pavers Horizonte Mix Engenharia" width="1376" height="768" loading="lazy" decoding="async" />
+            </picture>
           </div>
           <div class="about-badge-floating">
             <div class="badge-number">Santarém - PA</div>
@@ -287,10 +474,10 @@
 
         <!-- Filtros de Categoria -->
         <div class="product-filters">
-          <button class="filter-btn active" data-filter="all">Todos os Produtos (6)</button>
-          <button class="filter-btn" data-filter="blocos">Blocos de Concreto</button>
-          <button class="filter-btn" data-filter="canaletas">Canaletas</button>
-          <button class="filter-btn" data-filter="pavers">Pavers / Pavimentação</button>
+          <button type="button" class="filter-btn active" data-filter="all">Todos os Produtos (6)</button>
+          <button type="button" class="filter-btn" data-filter="blocos">Blocos de Concreto</button>
+          <button type="button" class="filter-btn" data-filter="canaletas">Canaletas</button>
+          <button type="button" class="filter-btn" data-filter="pavers">Pavers / Pavimentação</button>
         </div>
       </div>
 
@@ -306,8 +493,8 @@
        ========================================================================= -->
   <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-label="Detalhes do Produto">
     <div class="modal-container">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Fechar Detalhes">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Fechar Detalhes">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
@@ -338,10 +525,10 @@
 
       <div class="calculator-card">
         <div class="calc-tabs">
-          <button class="calc-tab-btn active" id="calcPaversBtn">
+          <button type="button" class="calc-tab-btn active" id="calcPaversBtn">
             Pavimentação (Pavers)
           </button>
-          <button class="calc-tab-btn" id="calcBlocosBtn">
+          <button type="button" class="calc-tab-btn" id="calcBlocosBtn">
             Alvenaria (Blocos e Canaletas)
           </button>
         </div>
@@ -363,7 +550,7 @@
 
               <div class="input-group">
                 <label for="paverArea">Área a Pavimentar (m²)</label>
-                <input type="number" id="paverArea" value="100" min="1" step="0.5" />
+                <input type="number" id="paverArea" value="100" min="1" max="1000000" step="0.5" />
               </div>
             </div>
 
@@ -379,20 +566,20 @@
 
               <div class="input-group">
                 <label for="blocoArea">Área de Parede ou Muro (m²)</label>
-                <input type="number" id="blocoArea" value="50" min="1" step="0.5" />
+                <input type="number" id="blocoArea" value="50" min="1" max="1000000" step="0.5" />
               </div>
             </div>
           </div>
 
           <!-- Resultado Estimado -->
           <div class="calc-result-box">
-            <h4>Quantidade Estimada</h4>
+            <h3>Quantidade Estimada</h3>
             <div class="result-number" id="paverResultNumber">4.095</div>
             <div class="result-unit">Peças recomendadas (já inclui 5% de margem)</div>
 
             <div class="result-details" id="paverResultDetails"></div>
 
-            <a href="#" id="paverWhatsAppBtn" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-lg" style="width: 100%;">
+            <a href="https://wa.me/5593991981830?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%204095%20unidades%20de%20Paver%20Unistein%2018%20faces%20(%C3%A1rea%20de%20100%20m%C2%B2).%20Podem%20me%20ajudar%3F" id="paverWhatsAppBtn" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-lg" style="width: 100%;">
               Orçar Essa Quantidade no WhatsApp
             </a>
           </div>
@@ -418,15 +605,15 @@
 
           <div class="quote-highlights">
             <div class="highlight-item">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span> Blocos, canaletas e pavers com padrão rigoroso de fábrica</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Blocos, canaletas e pavers com padrão rigoroso de fábrica</span>
             </div>
             <div class="highlight-item">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>Condições comerciais especiais para construtoras e grandes volumes</span>
             </div>
             <div class="highlight-item">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <span>Entrega programada na sua obra em Santarém - PA</span>
             </div>
           </div>
@@ -448,26 +635,32 @@
           <h3>Envie os Dados do seu Pedido</h3>
           <p>Preencha abaixo para iniciar o atendimento já com as informações da sua obra:</p>
 
-          <form id="quoteForm">
+          <form id="quoteForm" action="https://wa.me/5593991981830" method="get" novalidate>
+            <!-- Honeypot Anti-Spam (Oculto para usuários reais) -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="quoteWebsite">Não preencha este campo</label>
+              <input type="text" id="quoteWebsite" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
             <div class="form-row">
               <div class="form-group">
                 <label for="quoteName">Nome ou Empresa *</label>
-                <input type="text" id="quoteName" placeholder="Seu nome ou construtora" required />
+                <input type="text" id="quoteName" name="name" placeholder="Seu nome ou construtora" maxlength="80" autocomplete="name" required />
               </div>
               <div class="form-group">
                 <label for="quotePhone">Telefone / WhatsApp *</label>
-                <input type="tel" id="quotePhone" placeholder="(93) 99123-4567" required />
+                <input type="tel" id="quotePhone" name="phone" placeholder="(93) 99123-4567" maxlength="25" autocomplete="tel" required />
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="quoteCity">Local da Obra *</label>
-                <input type="text" id="quoteCity" value="Santarém - PA" required />
+                <input type="text" id="quoteCity" name="city" value="Santarém - PA" maxlength="60" required />
               </div>
               <div class="form-group">
                 <label for="quoteProduct">Produto de Interesse *</label>
-                <select id="quoteProduct" required>
+                <select id="quoteProduct" name="product" required>
                   <option value="Paver Unistein 18 faces (08 cm)">Paver Unistein 18 faces (08 cm)</option>
                   <option value="Paver Sextavado (30x08 / 25x08 / 25x06 cm)">Paver Sextavado (30x08 / 25x08 / 25x06)</option>
                   <option value="Paver Retangular (10x20 cm)">Paver Retangular (10 x 20 cm)</option>
@@ -481,13 +674,17 @@
 
             <div class="form-group">
               <label for="quoteQty">Quantidade Aproximada (m² ou milheiros)</label>
-              <input type="text" id="quoteQty" placeholder="Ex: 250 m² de paver ou 3.000 blocos" />
+              <input type="text" id="quoteQty" name="quantity" placeholder="Ex: 250 m² de paver ou 3.000 blocos" maxlength="80" />
             </div>
 
             <div class="form-group">
               <label for="quoteNotes">Observações (opcional)</label>
-              <textarea id="quoteNotes" placeholder="Informe detalhes da entrega ou dúvidas sobre as peças..."></textarea>
+              <textarea id="quoteNotes" name="notes" placeholder="Informe detalhes da entrega ou dúvidas sobre as peças..." maxlength="400"></textarea>
             </div>
+
+            <p class="form-lgpd-notice">
+              Ao clicar em enviar, seus dados serão direcionados exclusivamente ao WhatsApp comercial da Horizonte Mix conforme nossa <a href="#privacidade" class="open-privacy-modal">Política de Privacidade (LGPD)</a>.
+            </p>
 
             <button type="submit" class="btn btn-gold btn-lg" style="width: 100%;">
               Chamar no WhatsApp para Orçamento
@@ -516,30 +713,30 @@
           <div class="location-info-list">
             <div class="loc-item">
               <div class="loc-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               </div>
               <div class="loc-details">
-                <h4>Endereço</h4>
+                <h3>Endereço</h3>
                 <p>Estrada da Maria José, Santarém - PA • CEP 68.038-000</p>
               </div>
             </div>
 
             <div class="loc-item">
               <div class="loc-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
               </div>
               <div class="loc-details">
-                <h4>Horário de Atendimento</h4>
+                <h3>Horário de Atendimento</h3>
                 <p>Segunda a Sexta: <strong>07:30 às 17:30</strong><br>Sábados: <strong>07:30 às 12:00</strong></p>
               </div>
             </div>
 
             <div class="loc-item">
               <div class="loc-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               </div>
               <div class="loc-details">
-                <h4>Contato Direto</h4>
+                <h3>Contato Direto</h3>
                 <p>WhatsApp: <strong>(93) 99198-1830</strong><br>E-mail: <strong>horizontemixstm@gmail.com</strong></p>
               </div>
             </div>
@@ -558,8 +755,9 @@
             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15944.5!2d-54.718!3d-2.458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sEstrada+da+Maria+Jos%C3%A9,+Santar%C3%A9m+-+PA!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
             width="100%"
             height="460"
+            loading="lazy"
             allowfullscreen=""
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerpolicy="strict-origin-when-cross-origin"
             title="Mapa da Fábrica Horizonte Mix em Santarém - PA">
           </iframe>
         </div>
@@ -575,7 +773,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="footer-logo-box">
-            <img src="assets/images/logo-horizonte-mix.png" alt="Logo Horizonte Mix Engenharia" class="footer-logo" />
+            <img src="assets/images/logo-horizonte-mix.png" alt="Logo Horizonte Mix Engenharia" class="footer-logo" width="1024" height="383" loading="lazy" decoding="async" />
           </div>
           <p>
             Soluções em concreto para pavimentação e construção civil, com eficiência, agilidade e atendimento direto da fábrica em Santarém - PA.
@@ -583,7 +781,7 @@
         </div>
 
         <div>
-          <h4 class="footer-heading">Navegação</h4>
+          <h3 class="footer-heading">Navegação</h3>
           <ul class="footer-links">
             <li><a href="#inicio">Início</a></li>
             <li><a href="#quem-somos">Quem Somos</a></li>
@@ -591,14 +789,15 @@
             <li><a href="#calculadora">Calculadora de Obra</a></li>
             <li><a href="#orcamento">Solicitar Orçamento</a></li>
             <li><a href="#localizacao">Localização</a></li>
+            <li><a href="#privacidade" class="open-privacy-modal">Política de Privacidade (LGPD)</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-heading">Contato</h4>
+          <h3 class="footer-heading">Contato</h3>
           <div class="footer-contact-list">
             <div class="footer-contact-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               <div>
                 <strong>WhatsApp:</strong><br>
                 <a href="https://wa.me/5593991981830?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento.%20Podem%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer">+55 (93) 99198-1830</a>
@@ -606,7 +805,7 @@
             </div>
 
             <div class="footer-contact-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               <div>
                 <strong>E-mail:</strong><br>
                 <a href="mailto:horizontemixstm@gmail.com">horizontemixstm@gmail.com</a>
@@ -614,7 +813,7 @@
             </div>
 
             <div class="footer-contact-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               <div>
                 <strong>Endereço:</strong><br>
                 Estrada da Maria José, Santarém - PA • CEP 68.038-000
@@ -624,14 +823,14 @@
 
           <div class="social-links">
             <a href="https://www.instagram.com/horizontemixstm" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram @horizontemixstm" title="Instagram @horizontemixstm">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
             <a href="https://wa.me/5593991981830?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento.%20Podem%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp Oficial" title="WhatsApp (93) 99198-1830">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
               </svg>
             </a>
@@ -641,30 +840,79 @@
 
       <div class="footer-bottom">
         <span>&copy; 2026 Horizonte Mix Engenharia Ltda — Todos os direitos reservados.</span>
-        <span>Santarém - PA • @horizontemixstm</span>
+        <span>Santarém - PA • <a href="#privacidade" class="footer-privacy-link open-privacy-modal">Privacidade e LGPD</a></span>
       </div>
     </div>
   </footer>
 
   <!-- =========================================================================
+       MODAL DE POLÍTICA DE PRIVACIDADE E LGPD
+       ========================================================================= -->
+  <div class="modal-overlay" id="privacyModal" role="dialog" aria-modal="true" aria-label="Política de Privacidade e LGPD">
+    <div class="modal-container" style="max-width: 720px;">
+      <button type="button" class="modal-close-btn" id="privacyCloseBtn" aria-label="Fechar Política de Privacidade">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="privacy-modal-body">
+        <h3>Política de Privacidade e Proteção de Dados (LGPD)</h3>
+        <p>A <strong>Horizonte Mix Engenharia Ltda</strong> respeita a sua privacidade e atua em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD).</p>
+
+        <h4>1. Coleta e Uso de Informações</h4>
+        <p>Os dados informados voluntariamente no formulário de orçamento (nome/empresa, telefone, local da obra e produto de interesse) não são armazenados em bancos de dados externos neste site: eles são utilizados exclusivamente no seu navegador para gerar a mensagem de atendimento direto no WhatsApp comercial da Horizonte Mix.</p>
+
+        <h4>2. Cookies e Serviços de Terceiros</h4>
+        <p>Este site utiliza recursos essenciais de funcionamento local e incorpora o mapa interativo do Google Maps para exibição do endereço da fábrica em Santarém - PA, que pode utilizar cookies técnicos de acordo com a política de privacidade da Google.</p>
+
+        <h4>3. Direitos do Titular e Contato</h4>
+        <p>Você pode solicitar esclarecimentos, atualização ou exclusão de seus dados de contato comercial a qualquer momento através do e-mail <strong>horizontemixstm@gmail.com</strong> ou pelo WhatsApp <strong>(93) 99198-1830</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       AVISO DE COOKIES & LGPD (Discreto e Fechável)
+       ========================================================================= -->
+  <div class="lgpd-banner" id="lgpdBanner" role="region" aria-label="Aviso de Privacidade e Cookies">
+    <div>
+      Utilizamos recursos essenciais para melhorar sua navegação e agilizar seu orçamento conforme nossa <a href="#privacidade" class="footer-privacy-link open-privacy-modal">Política de Privacidade (LGPD)</a>.
+    </div>
+    <div class="lgpd-banner-actions">
+      <button type="button" class="btn btn-gold btn-sm" id="lgpdAcceptBtn">Entendi e Aceitar</button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
        FLOATING WHATSAPP BUTTON (Somente o Botão Circular com a Logo do WhatsApp)
        ========================================================================= -->
   <a href="https://wa.me/5593991981830?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento.%20Podem%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Falar no WhatsApp" title="Falar no WhatsApp: (93) 99198-1830">
-    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
     </svg>
   </a>
 
   <!-- Toast Notification -->
-  <div class="toast-notification" id="toastNotification">
+  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite">
     Redirecionando para o WhatsApp oficial...
   </div>
 
-  <!-- GSAP & ScrollTrigger for Fluid Section Animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- GSAP & ScrollTrigger with Subresource Integrity (SRI) + defer -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    defer></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    defer></script>
 
-  <!-- Master JavaScript -->
-  <script src="assets/js/main.js"></script>
+  <!-- Master JavaScript with defer -->
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

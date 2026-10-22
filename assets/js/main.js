@@ -1,21 +1,40 @@
 /**
  * HORIZONTE MIX — ENGENHARIA LTDA
  * Interactive Controller: Hero Slider, Product Catalog & Modal,
- * Work Yield Calculator, Direct WhatsApp Dispatcher & ScrollTrigger Animations.
+ * Work Yield Calculator, Direct WhatsApp Dispatcher, LGPD & ScrollTrigger Animations.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   // Official WhatsApp Number: +55 93 99198-1830
   const WHATSAPP_NUMBER = '5593991981830';
 
-  // Products Catalog (Faithful to Horizonte Mix Briefing — No HM codes or round badges)
+  // XSS & Input Sanitization Helpers
+  function escapeHTML(value) {
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function sanitizeInput(value, maxLength = 120) {
+    return String(value ?? '')
+      .replace(/[\u0000-\u001F\u007F<>]/g, '')
+      .trim()
+      .slice(0, maxLength);
+  }
+
+  // Products Catalog (Faithful to Horizonte Mix Briefing — with WebP & explicit dimensions)
   const productsData = [
     {
       id: 'bloco-estrutura-vedacao',
       name: 'Bloco de Estrutura e Vedação',
+      alt: 'Bloco de Estrutura e Vedação de Concreto 09x19x39 cm Horizonte Mix em Santarém - PA',
       category: 'blocos',
       categoryLabel: 'Alvenaria e Construção',
       image: 'assets/images/bloco-estrutura-vedacao.jpg',
+      imageWebp: 'assets/images/bloco-estrutura-vedacao.webp',
       shortDesc: 'Bloco de concreto resistente e padronizado para levantamento de paredes, muros e estruturas.',
       fullDesc: 'Produzido em nossa fábrica em Santarém com rigoroso padrão de medidas, o Bloco de Estrutura e Vedação garante paredes alinhadas, menor gasto de argamassa no assentamento e excelente resistência para obras residenciais, comerciais e muros.',
       dimensions: '09 x 19 x 39 cm',
@@ -28,9 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'meio-bloco-vedacao',
       name: 'Meio Bloco de Estrutura e Vedação',
+      alt: 'Meio Bloco de Concreto para Estrutura e Vedação Horizonte Mix em Santarém - PA',
       category: 'blocos',
       categoryLabel: 'Alvenaria e Acabamento',
       image: 'assets/images/meio-bloco-vedacao.jpg',
+      imageWebp: 'assets/images/meio-bloco-vedacao.webp',
       shortDesc: 'Peça pronta para acabamento de cantos, vãos de portas e janelas sem precisar quebrar blocos na obra.',
       fullDesc: 'O Meio Bloco de Concreto facilita o trabalho do pedreiro na amarração das fiadas e no fechamento de vãos de portas e janelas. Evita cortes e quebras manuais no canteiro de obras, reduzindo o desperdício de material e deixando a alvenaria mais limpa.',
       dimensions: '09 x 19 x 39 cm (Meio Bloco)',
@@ -43,9 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'canaleta-lisa',
       name: 'Canaleta Lisa de Concreto',
+      alt: 'Canaleta Lisa de Concreto 14x19x39 cm Horizonte Mix em Santarém - PA',
       category: 'canaletas',
       categoryLabel: 'Vigas, Cintas e Escoamento',
       image: 'assets/images/canaleta-lisa.jpg',
+      imageWebp: 'assets/images/canaleta-lisa.webp',
       shortDesc: 'Canaleta de concreto prática para execução de cintas de amarração, vergas e escoamento de água.',
       fullDesc: 'A Canaleta Lisa Horizonte Mix traz rapidez e economia para a obra. Utilizada na execução de vigas, cintas de amarração, vergas de portas e janelas ou escoamento de água, dispensa o uso de fôrmas de madeira e entrega um acabamento firme e uniforme.',
       dimensions: '14 x 19 x 39 cm',
@@ -58,9 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'paver-unistein',
       name: 'Paver Unistein 18 Faces',
+      alt: 'Piso Intertravado Paver Unistein 18 Faces 08 cm Horizonte Mix em Santarém - PA',
       category: 'pavers',
       categoryLabel: 'Pavimentação Intertravada',
       image: 'assets/images/paver-unistein.jpg',
+      imageWebp: 'assets/images/paver-unistein.webp',
       shortDesc: 'Piso intertravado de 18 faces com encaixe firme, ideal para ruas, pátios de manobra e tráfego pesado.',
       fullDesc: 'O Paver Unistein 18 faces de 8 cm de altura oferece travamento superior entre as peças, suportando tráfego constante de veículos leves e pesados sem deslocar. É a solução ideal para pavimentação de ruas, condomínios, postos de combustível, estacionamentos e pátios industriais.',
       dimensions: '08 cm de altura',
@@ -73,9 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'paver-sextavado',
       name: 'Paver Sextavado',
+      alt: 'Bloquete Paver Sextavado de Concreto 30x08 e 25x08 cm Horizonte Mix em Santarém - PA',
       category: 'pavers',
       categoryLabel: 'Pavimentação Externa',
       image: 'assets/images/paver-sextavado.jpg',
+      imageWebp: 'assets/images/paver-sextavado.webp',
       shortDesc: 'Bloquete sextavado resistente para pavimentação de vias, pátios, estacionamentos e áreas externas.',
       fullDesc: 'O Paver Sextavado Horizonte Mix é fabricado em três opções de medidas para atender desde garagens e áreas externas até vias de circulação. Garante um piso firme, antiderrapante, durável e de fácil manutenção para o clima da nossa região.',
       dimensions: '30 x 08 cm | 25 x 08 cm | 25 x 06 cm',
@@ -88,9 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'paver-retangular',
       name: 'Paver Retangular',
+      alt: 'Paver Retangular de Concreto 10x20 cm Horizonte Mix em Santarém - PA',
       category: 'pavers',
       categoryLabel: 'Calçadas e Áreas Externas',
       image: 'assets/images/paver-retangular.jpg',
+      imageWebp: 'assets/images/paver-retangular.webp',
       shortDesc: 'Paver retangular versátil com excelente acabamento para calçadas, garagens, praças e condomínios.',
       fullDesc: 'O Paver Retangular (10 x 20 cm) combina resistência e ótimo visual para calçadas, passeios, garagens e áreas de convivência. Disponível nas espessuras de 6 cm e 8 cm, permite diferentes desenhos de assentamento e valoriza qualquer projeto.',
       dimensions: '10 x 20 x 08 cm | 10 x 20 x 06 cm',
@@ -117,9 +146,10 @@ document.addEventListener('DOMContentLoaded', () => {
     indicatorsContainer.innerHTML = '';
     slides.forEach((_, idx) => {
       const dot = document.createElement('button');
+      dot.type = 'button';
       dot.classList.add('indicator-dot');
       if (idx === 0) dot.classList.add('active');
-      dot.setAttribute('aria-label', `Slide ${idx + 1}`);
+      dot.setAttribute('aria-label', `Ir para o slide ${idx + 1}`);
       dot.addEventListener('click', () => {
         goToSlide(idx);
         resetAutoSlide();
@@ -199,20 +229,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
       card.innerHTML = `
         <div class="product-card-image">
-          <img src="${product.image}" alt="${product.name}" loading="lazy" />
+          <picture>
+            <source srcset="${escapeHTML(product.imageWebp)}" type="image/webp" />
+            <img src="${escapeHTML(product.image)}" alt="${escapeHTML(product.alt)}" width="1200" height="896" loading="lazy" decoding="async" />
+          </picture>
         </div>
         <div class="product-card-body">
-          <span class="product-category-label">${product.categoryLabel}</span>
-          <h3 class="product-card-title">${product.name}</h3>
-          <p class="product-card-desc">${product.shortDesc}</p>
+          <span class="product-category-label">${escapeHTML(product.categoryLabel)}</span>
+          <h3 class="product-card-title">${escapeHTML(product.name)}</h3>
+          <p class="product-card-desc">${escapeHTML(product.shortDesc)}</p>
           
           <div class="product-card-specs-row">
             <span>Medidas</span>
-            <strong>${product.dimensions}</strong>
+            <strong>${escapeHTML(product.dimensions)}</strong>
           </div>
           <div class="product-card-specs-row">
             <span>Material</span>
-            <strong>${product.materials}</strong>
+            <strong>${escapeHTML(product.materials)}</strong>
           </div>
 
           <div class="product-card-action">
@@ -255,6 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modalTabsNav.innerHTML = '';
     productsData.forEach(prod => {
       const tabBtn = document.createElement('button');
+      tabBtn.type = 'button';
       tabBtn.className = `tab-nav-btn ${prod.id === activeId ? 'active' : ''}`;
       tabBtn.textContent = prod.name;
       tabBtn.addEventListener('click', () => {
@@ -285,40 +319,43 @@ document.addEventListener('DOMContentLoaded', () => {
     modalProductContent.innerHTML = `
       <div class="modal-product-gallery">
         <div class="modal-main-img-box">
-          <img src="${product.image}" alt="${product.name}" id="modalProductImage" />
+          <picture>
+            <source srcset="${escapeHTML(product.imageWebp)}" type="image/webp" />
+            <img src="${escapeHTML(product.image)}" alt="${escapeHTML(product.alt)}" width="1200" height="896" decoding="async" id="modalProductImage" />
+          </picture>
         </div>
       </div>
 
       <div class="modal-product-info">
-        <span class="product-category-label">${product.categoryLabel}</span>
-        <h3>${product.name}</h3>
-        <p class="modal-desc">${product.fullDesc}</p>
+        <span class="product-category-label">${escapeHTML(product.categoryLabel)}</span>
+        <h3>${escapeHTML(product.name)}</h3>
+        <p class="modal-desc">${escapeHTML(product.fullDesc)}</p>
 
         <table class="modal-specs-table">
           <tbody>
             <tr>
               <td>Medidas / Dimensões</td>
-              <td><strong>${product.dimensions}</strong></td>
+              <td><strong>${escapeHTML(product.dimensions)}</strong></td>
             </tr>
             <tr>
               <td>Material</td>
-              <td>${product.materials}</td>
+              <td>${escapeHTML(product.materials)}</td>
             </tr>
             <tr>
               <td>Aplicações na Obra</td>
-              <td>${product.applications}</td>
+              <td>${escapeHTML(product.applications)}</td>
             </tr>
             <tr>
               <td>Diferenciais</td>
-              <td>${product.benefits}</td>
+              <td>${escapeHTML(product.benefits)}</td>
             </tr>
             <tr>
               <td>Disponibilidade</td>
-              <td>${product.availability}</td>
+              <td>${escapeHTML(product.availability)}</td>
             </tr>
             <tr>
               <td>Valor</td>
-              <td><strong>${product.price} (Direto da Fábrica)</strong></td>
+              <td><strong>${escapeHTML(product.price)} (Direto da Fábrica)</strong></td>
             </tr>
           </tbody>
         </table>
@@ -368,12 +405,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && productModal && productModal.classList.contains('open')) {
-      closeProductModal();
-    }
-  });
-
   /* ------------------------------------------------------------------------
      4. Calculadora de Obra (Pavers & Blocos)
      ------------------------------------------------------------------------ */
@@ -409,7 +440,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function updatePaversCalculation() {
     if (!paverAreaInput || !paverTypeSelect || !paverResultNumber) return;
 
-    const area = parseFloat(paverAreaInput.value) || 0;
+    const rawArea = parseFloat(paverAreaInput.value);
+    const area = Number.isFinite(rawArea) && rawArea > 0 ? Math.min(rawArea, 1000000) : 0;
     const paverType = paverTypeSelect.value;
 
     let unitsPerM2 = 39;
@@ -435,10 +467,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (paverResultDetails) {
       paverResultDetails.innerHTML = `
         <strong>Resumo do Cálculo:</strong><br>
-        • Área informada: ${area} m²<br>
-        • Produto: ${paverName} (~${unitsPerM2} peças/m²)<br>
+        • Área informada: ${escapeHTML(area)} m²<br>
+        • Produto: ${escapeHTML(paverName)} (~${escapeHTML(unitsPerM2)} peças/m²)<br>
         • Margem de segurança: +5% para recortes<br>
-        • Colchão de areia estimado (4 cm): ~${sandM3} m³
+        • Colchão de areia estimado (4 cm): ~${escapeHTML(sandM3)} m³
       `;
     }
 
@@ -459,7 +491,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateBlocosCalculation() {
     if (!blocoAreaInput || !blocoTypeSelect || !paverResultNumber) return;
 
-    const area = parseFloat(blocoAreaInput.value) || 0;
+    const rawArea = parseFloat(blocoAreaInput.value);
+    const area = Number.isFinite(rawArea) && rawArea > 0 ? Math.min(rawArea, 1000000) : 0;
     const unitsPerM2 = 12.5;
     const margin = 1.05;
     const totalBlocks = Math.ceil(area * unitsPerM2 * margin);
@@ -470,9 +503,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (paverResultDetails) {
       paverResultDetails.innerHTML = `
         <strong>Resumo de Alvenaria:</strong><br>
-        • Área de parede/muro: ${area} m²<br>
+        • Área de parede/muro: ${escapeHTML(area)} m²<br>
         • Rendimento médio: 12,5 blocos por m²<br>
-        • Sugestão de meio-blocos (cantos/vãos): ~${estimatedMeios} un<br>
+        • Sugestão de meio-blocos (cantos/vãos): ~${escapeHTML(estimatedMeios)} un<br>
         • Margem de segurança: +5% incluída
       `;
     }
@@ -491,7 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updatePaversCalculation();
 
   /* ------------------------------------------------------------------------
-     5. Quote Form Dispatcher
+     5. Quote Form Dispatcher (with Anti-Spam Honeypot & Input Sanitization)
      ------------------------------------------------------------------------ */
   const quoteForm = document.getElementById('quoteForm');
   const toastNotification = document.getElementById('toastNotification');
@@ -509,12 +542,23 @@ document.addEventListener('DOMContentLoaded', () => {
     quoteForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('quoteName')?.value.trim() || 'Cliente';
-      const phone = document.getElementById('quotePhone')?.value.trim() || '';
-      const city = document.getElementById('quoteCity')?.value.trim() || 'Santarém - PA';
-      const product = document.getElementById('quoteProduct')?.value || 'Produtos em Concreto';
-      const quantity = document.getElementById('quoteQty')?.value.trim() || 'A definir';
-      const notes = document.getElementById('quoteNotes')?.value.trim() || '';
+      // Anti-Spam Honeypot check: bots fill hidden fields
+      const honeypot = document.getElementById('quoteWebsite')?.value || '';
+      if (honeypot.trim() !== '') {
+        return;
+      }
+
+      const name = sanitizeInput(document.getElementById('quoteName')?.value, 80) || 'Cliente';
+      const phone = sanitizeInput(document.getElementById('quotePhone')?.value, 30);
+      const city = sanitizeInput(document.getElementById('quoteCity')?.value, 60) || 'Santarém - PA';
+      const product = sanitizeInput(document.getElementById('quoteProduct')?.value, 100) || 'Produtos em Concreto';
+      const quantity = sanitizeInput(document.getElementById('quoteQty')?.value, 80) || 'A definir';
+      const notes = sanitizeInput(document.getElementById('quoteNotes')?.value, 400);
+
+      if (!phone || phone.replace(/\D/g, '').length < 8) {
+        showToast('Por favor, informe um telefone ou WhatsApp válido.');
+        return;
+      }
 
       const text = [
         `Olá! Gostaria de solicitar um orçamento com a Horizonte Mix.`,
@@ -532,13 +576,82 @@ document.addEventListener('DOMContentLoaded', () => {
       showToast('Abrindo atendimento no WhatsApp...');
 
       setTimeout(() => {
-        window.open(url, '_blank');
+        const newWin = window.open(url, '_blank', 'noopener,noreferrer');
+        if (newWin) newWin.opener = null;
       }, 400);
     });
   }
 
   /* ------------------------------------------------------------------------
-     6. Navigation & ScrollSpy
+     6. LGPD Banner & Privacy Policy Modal
+     ------------------------------------------------------------------------ */
+  const lgpdBanner = document.getElementById('lgpdBanner');
+  const lgpdAcceptBtn = document.getElementById('lgpdAcceptBtn');
+  const privacyModal = document.getElementById('privacyModal');
+  const privacyCloseBtn = document.getElementById('privacyCloseBtn');
+  const privacyTriggers = document.querySelectorAll('.open-privacy-modal');
+
+  try {
+    if (lgpdBanner && localStorage.getItem('hm_lgpd_accepted') !== '1') {
+      lgpdBanner.classList.add('visible');
+    }
+  } catch (_) {
+    // Caso localStorage esteja restrito no navegador
+  }
+
+  if (lgpdAcceptBtn && lgpdBanner) {
+    lgpdAcceptBtn.addEventListener('click', () => {
+      lgpdBanner.classList.remove('visible');
+      try {
+        localStorage.setItem('hm_lgpd_accepted', '1');
+      } catch (_) {}
+    });
+  }
+
+  function openPrivacyModal(e) {
+    if (e) e.preventDefault();
+    if (privacyModal) {
+      privacyModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closePrivacyModal() {
+    if (privacyModal) {
+      privacyModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  privacyTriggers.forEach(trigger => {
+    trigger.addEventListener('click', openPrivacyModal);
+  });
+
+  if (privacyCloseBtn) {
+    privacyCloseBtn.addEventListener('click', closePrivacyModal);
+  }
+
+  if (privacyModal) {
+    privacyModal.addEventListener('click', (e) => {
+      if (e.target === privacyModal) {
+        closePrivacyModal();
+      }
+    });
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (productModal && productModal.classList.contains('open')) {
+        closeProductModal();
+      }
+      if (privacyModal && privacyModal.classList.contains('open')) {
+        closePrivacyModal();
+      }
+    }
+  });
+
+  /* ------------------------------------------------------------------------
+     7. Navigation & ScrollSpy
      ------------------------------------------------------------------------ */
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navMenu = document.querySelector('.nav-menu');
@@ -583,7 +696,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ------------------------------------------------------------------------
-     7. GSAP + ScrollTrigger Fluid Section Animations
+     8. GSAP + ScrollTrigger Fluid Section Animations
      ------------------------------------------------------------------------ */
   if (typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);

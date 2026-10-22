@@ -1,0 +1,103 @@
+# ==============================================================================
+# HORIZONTE MIX ENGENHARIA LTDA — HOSTINGER (.htaccess)
+# Segurança Web, Headers HTTP, Redirecionamento HTTPS e Performance (Cache/Gzip)
+# ==============================================================================
+
+# 1. Desabilitar listagem de diretórios
+Options -Indexes
+
+# 2. Definir Charset padrão e Documento principal
+AddDefaultCharset UTF-8
+DirectoryIndex index.html
+
+# 3. Motor de Reescrita (HTTPS forçado, canônica sem www e proteção de arquivos)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Permitir validação de certificado SSL (Let's Encrypt / Hostinger)
+  RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
+
+  # Bloquear acesso direto ao diretório .git e quaisquer arquivos ocultos (.env, .gitignore, etc.)
+  RewriteRule (^|/)\.(?!well-known/) - [F,L]
+
+  # Forçar HTTPS e redirecionar www para não-www (301 Permanente)
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^www\.horizontemix\.com\.br$ [NC]
+  RewriteRule ^ https://horizontemix.com.br%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# 4. Bloquear exposição de documentação interna, backups e arquivos sensíveis
+<FilesMatch "(?i)\.(md|env|git|gitignore|bak|sql|log|sh|zip|tar|gz|swp|map)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# 5. Headers de Segurança HTTP
+<IfModule mod_headers.c>
+  # HSTS (Strict-Transport-Security) — 1 ano + subdomínios
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" "expr=%{HTTPS} == 'on'"
+
+  # Evitar MIME-sniffing
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Proteção contra Clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Política de Referrer segura que preserva funcionamento do Google Maps embed
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Isolamento de janelas pop-up (permite abrir WhatsApp em nova aba com segurança)
+  Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+
+  # Restrição de APIs de hardware do navegador não utilizadas pelo site
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+
+  # Content Security Policy (CSP) calibrada para HTML/CSS/JS locais + GSAP (cdnjs) + Google Fonts + Google Maps iframe
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src https://www.google.com https://maps.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me; frame-ancestors 'self'; upgrade-insecure-requests;"
+
+  # Remover assinatura de versão do servidor / PHP se existir
+  Header unset X-Powered-By
+  Header always unset X-Powered-By
+</IfModule>
+
+# 6. Tipos MIME modernos (WebP, WOFF2, JSON-LD)
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType application/ld+json .jsonld
+  AddType application/xml .xml
+</IfModule>
+
+# 7. Compressão GZIP / Deflate para acelerar Core Web Vitals (LCP / FCP)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript text/javascript
+  AddOutputFilterByType DEFLATE application/json application/ld+json application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# 8. Cache de Navegador (Long-Term Caching para imagens, CSS e JS)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/xml "access plus 1 hour"
+  ExpiresByType application/xml "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>

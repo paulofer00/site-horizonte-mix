@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://horizontemix.com.br/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://horizontemix.com.br/assets/images/hero-factory.jpg</image:loc>
+      <image:title>Fábrica de Artefatos de Concreto Horizonte Mix Engenharia em Santarém - PA</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://horizontemix.com.br/assets/images/bloco-estrutura-vedacao.jpg</image:loc>
+      <image:title>Bloco de Estrutura e Vedação 09x19x39 cm Horizonte Mix</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://horizontemix.com.br/assets/images/meio-bloco-vedacao.jpg</image:loc>
+      <image:title>Meio Bloco de Estrutura e Vedação Horizonte Mix</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://horizontemix.com.br/assets/images/canaleta-lisa.jpg</image:loc>
+      <image:title>Canaleta Lisa de Concreto 14x19x39 cm Horizonte Mix</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://horizontemix.com.br/assets/images/paver-unistein.jpg</image:loc>
+      <image:title>Paver Unistein 18 Faces 08 cm Horizonte Mix</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://horizontemix.com.br/assets/images/paver-sextavado.jpg</image:loc>
+      <image:title>Paver Sextavado de Concreto Horizonte Mix</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://horizontemix.com.br/assets/images/paver-retangular.jpg</image:loc>
+      <image:title>Paver Retangular 10x20 cm Horizonte Mix</image:title>
+    </image:image>
+  </url>
+</urlset>
