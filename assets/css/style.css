@@ -736,11 +736,11 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-gold);
 }
 
-/* 3-Column Product Cards */
+/* 4-Column Product Cards (8 Produtos = 2 Fileiras de 4) */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
 }
 
 .product-card {
@@ -763,8 +763,10 @@ h1, h2, h3, h4 {
 }
 
 .product-card-image {
-  height: 240px;
-  background-color: #eaedea;
+  height: 210px;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-light-border);
+  padding: 14px;
   overflow: hidden;
   position: relative;
 }
@@ -772,12 +774,12 @@ h1, h2, h3, h4 {
 .product-card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform var(--transition-smooth);
 }
 
 .product-card:hover .product-card-image img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .product-card-body {
@@ -960,9 +962,10 @@ h1, h2, h3, h4 {
 }
 
 .modal-main-img-box {
-  background: var(--color-light-bg);
+  background: #ffffff;
   border-radius: var(--radius-md);
   height: 340px;
+  padding: 18px;
   overflow: hidden;
   border: 1px solid var(--color-light-border);
 }
@@ -970,7 +973,7 @@ h1, h2, h3, h4 {
 .modal-main-img-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .modal-product-info h3 {

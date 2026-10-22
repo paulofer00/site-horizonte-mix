@@ -1,7 +1,7 @@
 /**
  * HORIZONTE MIX — ENGENHARIA LTDA
- * Interactive Controller: Hero Slider, Product Catalog & Modal,
- * Work Yield Calculator, Direct WhatsApp Dispatcher, LGPD & ScrollTrigger Animations.
+ * Interactive Controller: Hero Slider, 8-Product Catalog & Modal,
+ * Work Yield Calculator (Exact Factory Yields), Direct WhatsApp Dispatcher, LGPD & ScrollTrigger.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,107 +25,149 @@ document.addEventListener('DOMContentLoaded', () => {
       .slice(0, maxLength);
   }
 
-  // Products Catalog (Faithful to Horizonte Mix Briefing — with WebP & explicit dimensions)
+  // Catálogo Oficial com os 8 Produtos Disponíveis na Fábrica Horizonte Mix
   const productsData = [
     {
-      id: 'bloco-estrutura-vedacao',
-      name: 'Bloco de Estrutura e Vedação',
-      alt: 'Bloco de Estrutura e Vedação de Concreto 09x19x39 cm Horizonte Mix em Santarém - PA',
-      category: 'blocos',
-      categoryLabel: 'Alvenaria e Construção',
-      image: 'assets/images/bloco-estrutura-vedacao.jpg',
-      imageWebp: 'assets/images/bloco-estrutura-vedacao.webp',
-      shortDesc: 'Bloco de concreto resistente e padronizado para levantamento de paredes, muros e estruturas.',
-      fullDesc: 'Produzido em nossa fábrica em Santarém com rigoroso padrão de medidas, o Bloco de Estrutura e Vedação garante paredes alinhadas, menor gasto de argamassa no assentamento e excelente resistência para obras residenciais, comerciais e muros.',
-      dimensions: '09 x 19 x 39 cm',
-      materials: 'Concreto',
-      applications: 'Levantamento de paredes, muros, galpões e construções residenciais ou comerciais.',
-      benefits: 'Alta resistência e durabilidade; medidas padronizadas que economizam massa e agilizam a obra.',
-      availability: 'Pronta entrega ou sob encomenda',
-      price: 'Sob Consulta'
-    },
-    {
-      id: 'meio-bloco-vedacao',
-      name: 'Meio Bloco de Estrutura e Vedação',
-      alt: 'Meio Bloco de Concreto para Estrutura e Vedação Horizonte Mix em Santarém - PA',
-      category: 'blocos',
-      categoryLabel: 'Alvenaria e Acabamento',
-      image: 'assets/images/meio-bloco-vedacao.jpg',
-      imageWebp: 'assets/images/meio-bloco-vedacao.webp',
-      shortDesc: 'Peça pronta para acabamento de cantos, vãos de portas e janelas sem precisar quebrar blocos na obra.',
-      fullDesc: 'O Meio Bloco de Concreto facilita o trabalho do pedreiro na amarração das fiadas e no fechamento de vãos de portas e janelas. Evita cortes e quebras manuais no canteiro de obras, reduzindo o desperdício de material e deixando a alvenaria mais limpa.',
-      dimensions: '09 x 19 x 39 cm (Meio Bloco)',
-      materials: 'Concreto',
-      applications: 'Amarração de cantos, encontros de paredes e acabamento em vãos de portas e janelas.',
-      benefits: 'Mais praticidade e rapidez no assentamento; evita quebras e desperdício de blocos inteiros.',
-      availability: 'Pronta entrega ou sob encomenda',
-      price: 'Sob Consulta'
-    },
-    {
-      id: 'canaleta-lisa',
-      name: 'Canaleta Lisa de Concreto',
-      alt: 'Canaleta Lisa de Concreto 14x19x39 cm Horizonte Mix em Santarém - PA',
-      category: 'canaletas',
-      categoryLabel: 'Vigas, Cintas e Escoamento',
-      image: 'assets/images/canaleta-lisa.jpg',
-      imageWebp: 'assets/images/canaleta-lisa.webp',
-      shortDesc: 'Canaleta de concreto prática para execução de cintas de amarração, vergas e escoamento de água.',
-      fullDesc: 'A Canaleta Lisa Horizonte Mix traz rapidez e economia para a obra. Utilizada na execução de vigas, cintas de amarração, vergas de portas e janelas ou escoamento de água, dispensa o uso de fôrmas de madeira e entrega um acabamento firme e uniforme.',
-      dimensions: '14 x 19 x 39 cm',
-      materials: 'Concreto',
-      applications: 'Cintas de amarração, vergas, contravergas e condução ou escoamento superficial.',
-      benefits: 'Dispensa caixarias de madeira; reduz o tempo de mão de obra; ótimo encaixe e acabamento.',
-      availability: 'Pronta entrega ou sob encomenda',
-      price: 'Sob Consulta'
-    },
-    {
-      id: 'paver-unistein',
-      name: 'Paver Unistein 18 Faces',
-      alt: 'Piso Intertravado Paver Unistein 18 Faces 08 cm Horizonte Mix em Santarém - PA',
+      id: 'paver-sextavado-30mpa',
+      name: 'Paver Sextavado 30x30x8 - 30 MPa',
+      alt: 'Paver Sextavado 30x30x8 cm 30 MPa de Concreto Horizonte Mix em Santarém - PA',
       category: 'pavers',
-      categoryLabel: 'Pavimentação Intertravada',
-      image: 'assets/images/paver-unistein.jpg',
-      imageWebp: 'assets/images/paver-unistein.webp',
-      shortDesc: 'Piso intertravado de 18 faces com encaixe firme, ideal para ruas, pátios de manobra e tráfego pesado.',
-      fullDesc: 'O Paver Unistein 18 faces de 8 cm de altura oferece travamento superior entre as peças, suportando tráfego constante de veículos leves e pesados sem deslocar. É a solução ideal para pavimentação de ruas, condomínios, postos de combustível, estacionamentos e pátios industriais.',
-      dimensions: '08 cm de altura',
-      materials: 'Concreto de alta resistência',
-      applications: 'Ruas, condomínios, pátios de carga, postos de combustível, estacionamentos e acessos.',
-      benefits: 'Travamento firme nas 18 faces; suporta tráfego pesado; fácil manutenção e liberação rápida do piso.',
+      categoryLabel: 'Pavimentação Pesada • 30 MPa',
+      image: 'assets/images/paver-sextavado.jpg',
+      imageWebp: 'assets/images/paver-sextavado.webp',
+      shortDesc: 'Bloquete sextavado de alta resistência (30 MPa) para ruas, pátios de manobra e tráfego pesado.',
+      fullDesc: 'O Paver Sextavado 30x30x8 cm de 30 MPa é produzido com concreto de alta resistência estrutural, ideal para pavimentação de ruas, avenidas, postos de combustível, pátios de carga e circulação de caminhões. Seu formato hexagonal distribui as cargas de forma uniforme e facilita a drenagem.',
+      dimensions: '30 x 30 x 08 cm',
+      yieldInfo: '11 unidades por m²',
+      materials: 'Concreto 30 MPa',
+      applications: 'Ruas, loteamentos, pátios industriais, postos de combustível e tráfego pesado.',
+      benefits: 'Resistência de 30 MPa; apenas 11 peças por m² (rápido assentamento); fácil manutenção.',
       availability: 'Pronta entrega ou produção programada',
       price: 'Sob Consulta'
     },
     {
-      id: 'paver-sextavado',
-      name: 'Paver Sextavado',
-      alt: 'Bloquete Paver Sextavado de Concreto 30x08 e 25x08 cm Horizonte Mix em Santarém - PA',
+      id: 'paver-sextavado-25mpa',
+      name: 'Paver Sextavado 30x30x8 - 25 MPa',
+      alt: 'Paver Sextavado 30x30x8 cm 25 MPa de Concreto Horizonte Mix em Santarém - PA',
       category: 'pavers',
-      categoryLabel: 'Pavimentação Externa',
+      categoryLabel: 'Pavimentação Externa • 25 MPa',
       image: 'assets/images/paver-sextavado.jpg',
       imageWebp: 'assets/images/paver-sextavado.webp',
-      shortDesc: 'Bloquete sextavado resistente para pavimentação de vias, pátios, estacionamentos e áreas externas.',
-      fullDesc: 'O Paver Sextavado Horizonte Mix é fabricado em três opções de medidas para atender desde garagens e áreas externas até vias de circulação. Garante um piso firme, antiderrapante, durável e de fácil manutenção para o clima da nossa região.',
-      dimensions: '30 x 08 cm | 25 x 08 cm | 25 x 06 cm',
-      materials: 'Concreto',
-      applications: 'Ruas, loteamentos, garagens, pátios comerciais, praças e calçadas.',
-      benefits: 'Grande resistência e firmeza; três opções de medidas; excelente escoamento da água da chuva.',
+      shortDesc: 'Bloquete sextavado de 25 MPa ideal para vias residenciais, condomínios, estacionamentos e pátios.',
+      fullDesc: 'O Paver Sextavado 30x30x8 cm de 25 MPa oferece excelente custo-benefício e durabilidade para pavimentação de condomínios, estacionamentos comerciais, vias residenciais e garagens. Garante superfície firme, antiderrapante e ótimo conforto térmico.',
+      dimensions: '30 x 30 x 08 cm',
+      yieldInfo: '11 unidades por m²',
+      materials: 'Concreto 25 MPa',
+      applications: 'Vias de condomínios, estacionamentos, garagens, pátios comerciais e acessos.',
+      benefits: 'Resistência de 25 MPa; rendimento de 11 peças por m²; excelente escoamento de água.',
       availability: 'Pronta entrega ou sob encomenda',
       price: 'Sob Consulta'
     },
     {
-      id: 'paver-retangular',
-      name: 'Paver Retangular',
-      alt: 'Paver Retangular de Concreto 10x20 cm Horizonte Mix em Santarém - PA',
+      id: 'paver-unistein-25mpa',
+      name: 'Paver Unistein 16 Faces 11x22x08 - 25 MPa',
+      alt: 'Paver Unistein 16 Faces 11x22x08 cm 25 MPa Horizonte Mix em Santarém - PA',
       category: 'pavers',
-      categoryLabel: 'Calçadas e Áreas Externas',
-      image: 'assets/images/paver-retangular.jpg',
-      imageWebp: 'assets/images/paver-retangular.webp',
-      shortDesc: 'Paver retangular versátil com excelente acabamento para calçadas, garagens, praças e condomínios.',
-      fullDesc: 'O Paver Retangular (10 x 20 cm) combina resistência e ótimo visual para calçadas, passeios, garagens e áreas de convivência. Disponível nas espessuras de 6 cm e 8 cm, permite diferentes desenhos de assentamento e valoriza qualquer projeto.',
-      dimensions: '10 x 20 x 08 cm | 10 x 20 x 06 cm',
+      categoryLabel: 'Piso Intertravado • 25 MPa',
+      image: 'assets/images/paver-unistein.jpg',
+      imageWebp: 'assets/images/paver-unistein.webp',
+      shortDesc: 'Piso intertravado de 16 faces (25 MPa) com travamento firme para ruas, estacionamentos e pátios.',
+      fullDesc: 'O Paver Unistein 16 Faces (11x22x08 cm) de 25 MPa proporciona intertravamento mecânico superior entre as peças, impedindo o deslocamento mesmo sob frenagem e manobra constante de veículos. Muito utilizado em ruas, condomínios, estacionamentos e acessos comerciais.',
+      dimensions: '11 x 22 x 08 cm',
+      yieldInfo: '42 unidades por m²',
+      materials: 'Concreto 25 MPa',
+      applications: 'Ruas, condomínios, estacionamentos, rampas de acesso e pátios comerciais.',
+      benefits: 'Travamento firme nas 16 faces; resistência de 25 MPa; liberação imediata após assentamento.',
+      availability: 'Pronta entrega ou produção programada',
+      price: 'Sob Consulta'
+    },
+    {
+      id: 'paver-unistein-15mpa',
+      name: 'Paver Unistein 16 Faces 11x22x08 - 15 MPa',
+      alt: 'Paver Unistein 16 Faces 11x22x08 cm 15 MPa Horizonte Mix em Santarém - PA',
+      category: 'pavers',
+      categoryLabel: 'Calçadas e Pátios Leves • 15 MPa',
+      image: 'assets/images/paver-unistein.jpg',
+      imageWebp: 'assets/images/paver-unistein.webp',
+      shortDesc: 'Piso intertravado de 16 faces (15 MPa) econômico para calçadas, passeios, praças e áreas externas.',
+      fullDesc: 'O Paver Unistein 16 Faces (11x22x08 cm) de 15 MPa mantém o mesmo padrão visual e encaixe perfeito da linha Unistein, sendo dimensionado com economia para locais de tráfego leve, como calçadas, áreas de lazer, praças, passeios de condomínios e garagens residenciais.',
+      dimensions: '11 x 22 x 08 cm',
+      yieldInfo: '42 unidades por m²',
+      materials: 'Concreto 15 MPa',
+      applications: 'Calçadas, passeios, praças, áreas externas residenciais e garagens leves.',
+      benefits: 'Ótima relação custo-benefício; encaixe preciso de 16 faces; acabamento alinhado e antiderrapante.',
+      availability: 'Pronta entrega ou sob encomenda',
+      price: 'Sob Consulta'
+    },
+    {
+      id: 'bloco-estrutural-14',
+      name: 'Bloco Estrutural 14x19x39',
+      alt: 'Bloco Estrutural de Concreto 14x19x39 cm Horizonte Mix em Santarém - PA',
+      category: 'blocos',
+      categoryLabel: 'Alvenaria Estrutural • 14 cm',
+      image: 'assets/images/bloco-estrutural-14.jpg',
+      imageWebp: 'assets/images/bloco-estrutural-14.webp',
+      shortDesc: 'Bloco estrutural de 14 cm com dois furos amplos para paredes portantes, muros altos e galpões.',
+      fullDesc: 'O Bloco Estrutural 14x19x39 cm da Horizonte Mix é fabricado com controle rigoroso de medidas e compactação. Seus dois furos verticais amplos facilitam a passagem de armaduras, grauteamento e tubulações, garantindo rapidez e solidez no levantamento de paredes estruturais e muros.',
+      dimensions: '14 x 19 x 39 cm',
+      yieldInfo: '12,5 unidades por m²',
+      materials: 'Concreto Estrutural',
+      applications: 'Alvenaria estrutural, paredes portantes, galpões, comércios e muros de grande porte.',
+      benefits: 'Medidas exatas (14 cm de espessura); menor consumo de argamassa; alta produtividade na obra.',
+      availability: 'Pronta entrega ou sob encomenda',
+      price: 'Sob Consulta'
+    },
+    {
+      id: 'bloco-estrutural-19',
+      name: 'Bloco Estrutural 19x19x39',
+      alt: 'Bloco Estrutural de Concreto 19x19x39 cm Horizonte Mix em Santarém - PA',
+      category: 'blocos',
+      categoryLabel: 'Alvenaria Pesada • 19 cm',
+      image: 'assets/images/bloco-estrutural-19.jpg',
+      imageWebp: 'assets/images/bloco-estrutural-19.webp',
+      shortDesc: 'Bloco estrutural largo de 19 cm para fundações, muros de contenção, bases e obras industriais.',
+      fullDesc: 'Com 19 cm de largura, o Bloco Estrutural 19x19x39 cm oferece máxima robustez e estabilidade para estruturas que exigem paredes mais espessas, muros de contenção, embasamentos, galpões industriais e reservatórios. Possui duas cavidades amplas para graute e ferragem.',
+      dimensions: '19 x 19 x 39 cm',
+      yieldInfo: '12,5 unidades por m²',
+      materials: 'Concreto Estrutural Reforçado',
+      applications: 'Muros de arrimo/contenção, fundações, embasamentos, galpões industriais e estruturas pesadas.',
+      benefits: 'Espessura robusta de 19 cm; excelente isolamento térmico e acústico; alta capacidade de carga.',
+      availability: 'Pronta entrega ou sob encomenda',
+      price: 'Sob Consulta'
+    },
+    {
+      id: 'bloco-vedacao-09',
+      name: 'Bloco Vedação 09x19x39',
+      alt: 'Bloco de Vedação de Concreto 09x19x39 cm Horizonte Mix em Santarém - PA',
+      category: 'blocos',
+      categoryLabel: 'Alvenaria de Vedação • 09 cm',
+      image: 'assets/images/bloco-vedacao-09.jpg',
+      imageWebp: 'assets/images/bloco-vedacao-09.webp',
+      shortDesc: 'Bloco de concreto de 09 cm leve e padronizado para fechamento de paredes, divisórias e muros.',
+      fullDesc: 'O Bloco de Vedação 09x19x39 cm é a escolha prática e econômica para fechamento de vãos em estruturas convencionais, paredes internas, divisórias e muros residenciais. Por ter faces regulares e prumo perfeito, reduz a espessura do reboco e acelera o serviço do pedreiro.',
+      dimensions: '09 x 19 x 39 cm',
+      yieldInfo: '12,5 unidades por m²',
       materials: 'Concreto',
-      applications: 'Calçadas, passeios públicos, garagens residenciais, áreas de lazer e condomínios.',
-      benefits: 'Acabamento alinhado e bonito; fácil instalação; disponível para tráfego leve (6 cm) e pesado (8 cm).',
+      applications: 'Fechamento de paredes internas e externas, muros residenciais e divisórias em geral.',
+      benefits: 'Menor peso sobre a estrutura; economia de argamassa e reboco; assentamento rápido.',
+      availability: 'Pronta entrega ou sob encomenda',
+      price: 'Sob Consulta'
+    },
+    {
+      id: 'bloco-canaleta-14',
+      name: 'Bloco Canaleta 14x09x39',
+      alt: 'Bloco Canaleta de Concreto 14x09x39 cm Horizonte Mix em Santarém - PA',
+      category: 'canaletas',
+      categoryLabel: 'Cintas, Vigas e Vergas • 14 cm',
+      image: 'assets/images/bloco-canaleta-14.jpg',
+      imageWebp: 'assets/images/bloco-canaleta-14.webp',
+      shortDesc: 'Canaleta em U (14x09x39 cm) para cintas de amarração, vergas e contravergas sem fôrma de madeira.',
+      fullDesc: 'O Bloco Canaleta 14x09x39 cm funciona como fôrma pronta para a concretagem de cintas de amarração de muros, vergas e contravergas de portas e janelas. Elimina o gasto com tábuas e desforma, mantendo o alinhamento perfeito com os blocos de 14 cm.',
+      dimensions: '14 x 09 x 39 cm',
+      yieldInfo: '2,5 unidades por metro linear',
+      materials: 'Concreto',
+      applications: 'Cintas de amarração horizontais, vergas, contravergas e vigas de respaldo.',
+      benefits: 'Dispensa caixaria de madeira; 2,5 peças por metro linear; encaixe limpo e rápido na alvenaria.',
       availability: 'Pronta entrega ou sob encomenda',
       price: 'Sob Consulta'
     }
@@ -208,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------------------------------------
-     2. Product Catalog Cards & Category Filter
+     2. Product Catalog Cards & Category Filter (8 Produtos)
      ------------------------------------------------------------------------ */
   const productsGrid = document.getElementById('productsGrid');
   const filterButtons = document.querySelectorAll('.filter-btn');
@@ -244,8 +286,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <strong>${escapeHTML(product.dimensions)}</strong>
           </div>
           <div class="product-card-specs-row">
-            <span>Material</span>
-            <strong>${escapeHTML(product.materials)}</strong>
+            <span>Rendimento</span>
+            <strong>${escapeHTML(product.yieldInfo)}</strong>
           </div>
 
           <div class="product-card-action">
@@ -338,7 +380,11 @@ document.addEventListener('DOMContentLoaded', () => {
               <td><strong>${escapeHTML(product.dimensions)}</strong></td>
             </tr>
             <tr>
-              <td>Material</td>
+              <td>Rendimento na Obra</td>
+              <td><strong>${escapeHTML(product.yieldInfo)}</strong></td>
+            </tr>
+            <tr>
+              <td>Material / Resistência</td>
               <td>${escapeHTML(product.materials)}</td>
             </tr>
             <tr>
@@ -354,7 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <td>${escapeHTML(product.availability)}</td>
             </tr>
             <tr>
-              <td>Valor</td>
+              <td>Cotação</td>
               <td><strong>${escapeHTML(product.price)} (Direto da Fábrica)</strong></td>
             </tr>
           </tbody>
@@ -406,12 +452,27 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------------------------------------
-     4. Calculadora de Obra (Pavers & Blocos)
+     4. Calculadora de Obra (8 Produtos com Medidas e Rendimentos Exatos)
+     - Paver Sextavado 30x30x8 (30 MPa e 25 MPa) = 11 unidades / m²
+     - Paver Unistein 16 Faces 11x22x08 (25 MPa e 15 MPa) = 42 unidades / m²
+     - Blocos 14x19x39, 19x19x39 e 09x19x39 = 12,5 unidades / m²
+     - Bloco Canaleta 14x09x39 = 2,5 unidades / metro linear (m)
      ------------------------------------------------------------------------ */
   const calcPaversBtn = document.getElementById('calcPaversBtn');
   const calcBlocosBtn = document.getElementById('calcBlocosBtn');
   const paversInputs = document.getElementById('paversInputs');
   const blocosInputs = document.getElementById('blocosInputs');
+
+  const paverAreaInput = document.getElementById('paverArea');
+  const paverTypeSelect = document.getElementById('paverType');
+  const blocoAreaInput = document.getElementById('blocoArea');
+  const blocoTypeSelect = document.getElementById('blocoType');
+  const blocoAreaLabel = document.getElementById('blocoAreaLabel');
+
+  const paverResultNumber = document.getElementById('paverResultNumber');
+  const calcResultUnit = document.getElementById('calcResultUnit');
+  const paverResultDetails = document.getElementById('paverResultDetails');
+  const paverWhatsAppBtn = document.getElementById('paverWhatsAppBtn');
 
   if (calcPaversBtn && calcBlocosBtn && paversInputs && blocosInputs) {
     calcPaversBtn.addEventListener('click', () => {
@@ -431,12 +492,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const paverAreaInput = document.getElementById('paverArea');
-  const paverTypeSelect = document.getElementById('paverType');
-  const paverResultNumber = document.getElementById('paverResultNumber');
-  const paverResultDetails = document.getElementById('paverResultDetails');
-  const paverWhatsAppBtn = document.getElementById('paverWhatsAppBtn');
-
   function updatePaversCalculation() {
     if (!paverAreaInput || !paverTypeSelect || !paverResultNumber) return;
 
@@ -444,39 +499,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const area = Number.isFinite(rawArea) && rawArea > 0 ? Math.min(rawArea, 1000000) : 0;
     const paverType = paverTypeSelect.value;
 
-    let unitsPerM2 = 39;
-    let paverName = 'Paver Unistein 18 faces';
+    let unitsPerM2 = 42;
+    let paverName = 'Paver Unistein 16 Faces 11x22x08 - 25 MPa';
 
-    if (paverType === 'sextavado-30') {
-      unitsPerM2 = 16;
-      paverName = 'Paver Sextavado (30 cm)';
-    } else if (paverType === 'sextavado-25') {
-      unitsPerM2 = 25;
-      paverName = 'Paver Sextavado (25 cm)';
-    } else if (paverType === 'retangular') {
-      unitsPerM2 = 50;
-      paverName = 'Paver Retangular (10 x 20 cm)';
+    if (paverType === 'sextavado-30mpa') {
+      unitsPerM2 = 11;
+      paverName = 'Paver Sextavado 30x30x8 - 30 MPa';
+    } else if (paverType === 'sextavado-25mpa') {
+      unitsPerM2 = 11;
+      paverName = 'Paver Sextavado 30x30x8 - 25 MPa';
+    } else if (paverType === 'unistein-25mpa') {
+      unitsPerM2 = 42;
+      paverName = 'Paver Unistein 16 Faces 11x22x08 - 25 MPa';
+    } else if (paverType === 'unistein-15mpa') {
+      unitsPerM2 = 42;
+      paverName = 'Paver Unistein 16 Faces 11x22x08 - 15 MPa';
     }
 
-    const margin = 1.05;
-    const totalPieces = Math.ceil(area * unitsPerM2 * margin);
+    const exactPieces = Math.ceil(area * unitsPerM2);
+    const piecesWithMargin = Math.ceil(area * unitsPerM2 * 1.05);
     const sandM3 = (area * 0.04).toFixed(2);
 
-    paverResultNumber.textContent = totalPieces.toLocaleString('pt-BR');
+    paverResultNumber.textContent = exactPieces.toLocaleString('pt-BR');
+    if (calcResultUnit) {
+      calcResultUnit.textContent = `Peças para ${area.toLocaleString('pt-BR')} m² (${unitsPerM2} un/m²)`;
+    }
 
     if (paverResultDetails) {
       paverResultDetails.innerHTML = `
-        <strong>Resumo do Cálculo:</strong><br>
-        • Área informada: ${escapeHTML(area)} m²<br>
-        • Produto: ${escapeHTML(paverName)} (~${escapeHTML(unitsPerM2)} peças/m²)<br>
-        • Margem de segurança: +5% para recortes<br>
+        <strong>Resumo Técnico da Pavimentação:</strong><br>
+        • Produto: ${escapeHTML(paverName)}<br>
+        • Área a pavimentar: <strong>${escapeHTML(area.toLocaleString('pt-BR'))} m²</strong><br>
+        • Rendimento padrão: <strong>${escapeHTML(unitsPerM2)} peças por m²</strong><br>
+        • Quantidade exata: <strong>${escapeHTML(exactPieces.toLocaleString('pt-BR'))} peças</strong><br>
+        • Com margem de recorte (+5%): <strong>${escapeHTML(piecesWithMargin.toLocaleString('pt-BR'))} peças</strong><br>
         • Colchão de areia estimado (4 cm): ~${escapeHTML(sandM3)} m³
       `;
     }
 
     if (paverWhatsAppBtn) {
       const msg = encodeURIComponent(
-        `Olá! Gostaria de solicitar um orçamento para ${totalPieces} unidades de ${paverName} (área de ${area} m²). Podem me ajudar?`
+        `Olá! Gostaria de solicitar um orçamento de ${paverName} para uma área de ${area} m² (${exactPieces} peças exatas / ${piecesWithMargin} peças com 5% de margem). Podem me ajudar?`
       );
       paverWhatsAppBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
     }
@@ -485,36 +548,83 @@ document.addEventListener('DOMContentLoaded', () => {
   if (paverAreaInput) paverAreaInput.addEventListener('input', updatePaversCalculation);
   if (paverTypeSelect) paverTypeSelect.addEventListener('change', updatePaversCalculation);
 
-  const blocoAreaInput = document.getElementById('blocoArea');
-  const blocoTypeSelect = document.getElementById('blocoType');
-
   function updateBlocosCalculation() {
     if (!blocoAreaInput || !blocoTypeSelect || !paverResultNumber) return;
 
-    const rawArea = parseFloat(blocoAreaInput.value);
-    const area = Number.isFinite(rawArea) && rawArea > 0 ? Math.min(rawArea, 1000000) : 0;
-    const unitsPerM2 = 12.5;
-    const margin = 1.05;
-    const totalBlocks = Math.ceil(area * unitsPerM2 * margin);
-    const estimatedMeios = Math.ceil(area * 1.5);
+    const rawMeasure = parseFloat(blocoAreaInput.value);
+    const measure = Number.isFinite(rawMeasure) && rawMeasure > 0 ? Math.min(rawMeasure, 1000000) : 0;
+    const blocoType = blocoTypeSelect.value;
 
-    paverResultNumber.textContent = totalBlocks.toLocaleString('pt-BR');
+    let unitsPerMeasure = 12.5;
+    let blocoName = 'Bloco Estrutural 14x19x39 cm';
+    let isLinearCanaleta = false;
 
-    if (paverResultDetails) {
-      paverResultDetails.innerHTML = `
-        <strong>Resumo de Alvenaria:</strong><br>
-        • Área de parede/muro: ${escapeHTML(area)} m²<br>
-        • Rendimento médio: 12,5 blocos por m²<br>
-        • Sugestão de meio-blocos (cantos/vãos): ~${escapeHTML(estimatedMeios)} un<br>
-        • Margem de segurança: +5% incluída
-      `;
+    if (blocoType === 'estrutural-14') {
+      unitsPerMeasure = 12.5;
+      blocoName = 'Bloco Estrutural 14x19x39 cm';
+    } else if (blocoType === 'estrutural-19') {
+      unitsPerMeasure = 12.5;
+      blocoName = 'Bloco Estrutural 19x19x39 cm';
+    } else if (blocoType === 'vedacao-09') {
+      unitsPerMeasure = 12.5;
+      blocoName = 'Bloco Vedação 09x19x39 cm';
+    } else if (blocoType === 'canaleta-14') {
+      unitsPerMeasure = 2.5;
+      blocoName = 'Bloco Canaleta 14x09x39 cm';
+      isLinearCanaleta = true;
     }
 
-    if (paverWhatsAppBtn) {
-      const msg = encodeURIComponent(
-        `Olá! Gostaria de solicitar um orçamento para ${totalBlocks} Blocos de Estrutura e Vedação (09x19x39 cm) para ${area} m² de parede. Podem me ajudar?`
-      );
-      paverWhatsAppBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+    if (blocoAreaLabel) {
+      blocoAreaLabel.textContent = isLinearCanaleta
+        ? 'Comprimento de Cinta / Viga / Verga (Metros Lineares - m)'
+        : 'Área de Parede ou Muro (m²)';
+    }
+
+    const exactBlocks = Math.ceil(measure * unitsPerMeasure);
+    const blocksWithMargin = Math.ceil(measure * unitsPerMeasure * 1.05);
+
+    paverResultNumber.textContent = exactBlocks.toLocaleString('pt-BR');
+
+    if (isLinearCanaleta) {
+      if (calcResultUnit) {
+        calcResultUnit.textContent = `Canaletas para ${measure.toLocaleString('pt-BR')} m lineares (2,5 un/m)`;
+      }
+      if (paverResultDetails) {
+        paverResultDetails.innerHTML = `
+          <strong>Resumo Técnico de Canaletas:</strong><br>
+          • Produto: ${escapeHTML(blocoName)}<br>
+          • Comprimento linear: <strong>${escapeHTML(measure.toLocaleString('pt-BR'))} m</strong><br>
+          • Rendimento oficial: <strong>2,5 unidades por metro linear</strong> (peça de 39 cm)<br>
+          • Quantidade exata: <strong>${escapeHTML(exactBlocks.toLocaleString('pt-BR'))} unidades</strong><br>
+          • Com margem de segurança (+5%): <strong>${escapeHTML(blocksWithMargin.toLocaleString('pt-BR'))} unidades</strong>
+        `;
+      }
+      if (paverWhatsAppBtn) {
+        const msg = encodeURIComponent(
+          `Olá! Gostaria de solicitar um orçamento de ${blocoName} para ${measure} metros lineares (${exactBlocks} unidades exatas / ${blocksWithMargin} com 5% de margem). Podem me ajudar?`
+        );
+        paverWhatsAppBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+      }
+    } else {
+      if (calcResultUnit) {
+        calcResultUnit.textContent = `Blocos para ${measure.toLocaleString('pt-BR')} m² (12,5 un/m²)`;
+      }
+      if (paverResultDetails) {
+        paverResultDetails.innerHTML = `
+          <strong>Resumo Técnico de Alvenaria:</strong><br>
+          • Produto: ${escapeHTML(blocoName)}<br>
+          • Área de parede/muro: <strong>${escapeHTML(measure.toLocaleString('pt-BR'))} m²</strong><br>
+          • Rendimento oficial: <strong>12,5 blocos por m²</strong> (face 19x39 cm)<br>
+          • Quantidade exata: <strong>${escapeHTML(exactBlocks.toLocaleString('pt-BR'))} unidades</strong><br>
+          • Com margem de segurança (+5%): <strong>${escapeHTML(blocksWithMargin.toLocaleString('pt-BR'))} unidades</strong>
+        `;
+      }
+      if (paverWhatsAppBtn) {
+        const msg = encodeURIComponent(
+          `Olá! Gostaria de solicitar um orçamento de ${blocoName} para ${measure} m² de parede (${exactBlocks} unidades exatas / ${blocksWithMargin} com 5% de margem). Podem me ajudar?`
+        );
+        paverWhatsAppBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+      }
     }
   }
 
@@ -542,7 +652,7 @@ document.addEventListener('DOMContentLoaded', () => {
     quoteForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Anti-Spam Honeypot check: bots fill hidden fields
+      // Anti-Spam Honeypot check
       const honeypot = document.getElementById('quoteWebsite')?.value || '';
       if (honeypot.trim() !== '') {
         return;
@@ -595,9 +705,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (lgpdBanner && localStorage.getItem('hm_lgpd_accepted') !== '1') {
       lgpdBanner.classList.add('visible');
     }
-  } catch (_) {
-    // Caso localStorage esteja restrito no navegador
-  }
+  } catch (_) {}
 
   if (lgpdAcceptBtn && lgpdBanner) {
     lgpdAcceptBtn.addEventListener('click', () => {
@@ -732,7 +840,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animateGroupOnScroll('.trust-section', '.trust-item', { y: 20, scale: 0.98 }, 0.08);
     animateGroupOnScroll('.about-section', '.about-visual, .about-content > *', { y: 26, scale: 0.985 }, 0.08);
-    animateGroupOnScroll('.products-section', '#produtos .section-eyebrow, #produtos .section-title, #produtos .section-subtitle, #produtos .product-filters, .product-card', { y: 28, scale: 0.985 }, 0.07);
+    animateGroupOnScroll('.products-section', '#produtos .section-eyebrow, #produtos .section-title, #produtos .section-subtitle, #produtos .product-filters, .product-card', { y: 28, scale: 0.985 }, 0.06);
     animateGroupOnScroll('.calculator-section', '.calculator-card', { y: 28, scale: 0.985 }, 0);
     animateGroupOnScroll('.quote-section', '.quote-info, .quote-form-card', { y: 28, scale: 0.985 }, 0.12);
     animateGroupOnScroll('.location-section', '.location-card, .map-container', { y: 28, scale: 0.985 }, 0.12);
